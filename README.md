@@ -1,5 +1,5 @@
 
-# 🧪 Pre-entrega-Proyecto-Automation-QA-Emmanuel-Lasa
+# 🧪 Pre entrega Proyecto Automation QA Emmanuel Lasa
 
 Este proyecto contiene una suite de pruebas automatizadas utilizando **Python**, **Selenium WebDriver** y **Pytest** para la plataforma de práctica [SauceDemo](https://saucedemo.com). El objetivo es validar los flujos principales de la interfaz de usuario, incluyendo el inicio de sesión, la verificación del inventario y la interacción con el carrito de compras.
 
