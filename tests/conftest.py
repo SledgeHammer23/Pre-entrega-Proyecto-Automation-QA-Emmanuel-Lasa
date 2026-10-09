@@ -1,7 +1,7 @@
 import pytest
 import productos
-
-
+import os
+from datetime import datetime
 # decoradores
 @pytest.fixture(autouse=True)
 def limpiar_productos():
@@ -18,3 +18,19 @@ def datos_base():
     ])
 
     return productos.productos
+
+
+
+@pytest.hookimpl(tryfirst=True)
+def pytest_configure(config):
+
+    carpeta_reportes = "reports"
+    
+    if not os.path.exists(carpeta_reportes):
+        os.makedirs(carpeta_reportes)
+        
+    fecha_hora = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    
+    config.option.htmlpath = os.path.join(carpeta_reportes, f"reporte_{fecha_hora}.html")
+    config.option.self_contained_html = True
+
